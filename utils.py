@@ -106,8 +106,8 @@ def load_vul_deepacker(list_arch_os, shuffle_data=True, randseed='default'):
     X_full = []
     Y_full = np.array([])
     for arch_os in list_arch_os:
-        decimal_functions_path = 'dataset/vocab_opcode-' + arch_os + '.data'
-        label_path = 'dataset/labels-' + arch_os + '.data'
+        decimal_functions_path = 'MDSeqVAE/dataset/vocab_opcode-' + arch_os + '.data'
+        label_path = 'MDSeqVAE/dataset/labels-' + arch_os + '.data'
         with open(decimal_functions_path, 'r') as f:
             X_lines = f.readlines()
         with open(label_path, 'r') as f:

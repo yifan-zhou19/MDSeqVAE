@@ -131,7 +131,7 @@ class RNNClassifier:
 
         # -------------------- important parameters -------------------- #
 
-        tf.set_random_seed(utils._RANDOM_SEED)
+        tf.random.set_seed(utils._RANDOM_SEED)
         self.logging_path = utils._LOG
 
         # For writing gradient and value into a easy readable file

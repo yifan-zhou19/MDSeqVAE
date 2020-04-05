@@ -38,9 +38,9 @@ def load_doc_vec(list_arch_os, FeatureSize, shuffle_data=True, randseed='default
     X_opcode = []
     Y_full = np.array([])
     for arch_os in list_arch_os:
-        decimal_functions_path = 'dataset/doc2vec' + FeatureSize +'_vocab_opcode-' + arch_os + '.data'
+        decimal_functions_path = 'MDSeqVAE/dataset/doc2vec' + FeatureSize +'_vocab_opcode-' + arch_os + '.data'
         print(decimal_functions_path)
-        label_path = 'dataset/labels-' + arch_os + '.data'
+        label_path = 'MDSeqVAE/dataset/labels-' + arch_os + '.data'
         with open(decimal_functions_path, 'r') as f:
             X_lines = f.readlines()
         with open(label_path, 'r') as f:
@@ -167,8 +167,8 @@ def load_vul_deepackerFixedLength(list_arch_os, ourLength, shuffle_data=True, ra
     X_full = []
     Y_full = np.array([])
     for arch_os in list_arch_os:
-        decimal_functions_path = 'dataset/vocab_opcode-' + arch_os + '.data'
-        label_path = 'dataset/labels-' + arch_os + '.data'
+        decimal_functions_path = 'MDSeqVAE/dataset/vocab_opcode-' + arch_os + '.data'
+        label_path = 'MDSeqVAE/dataset/labels-' + arch_os + '.data'
         with open(decimal_functions_path, 'r') as f:
             X_lines = f.readlines()
         with open(label_path, 'r') as f:
